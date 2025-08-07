@@ -11,6 +11,4 @@ ENV HOME=/home/terraria
 RUN sed -i 's|/root|$HOME|g' /vanilla/run.sh
 
 # Set ownership of HOME directory
-RUN sed -i '2i\
-chown -R $(id -u):$(id -g) "$HOME"
-' /vanilla/run.sh
+RUN sed -i '2i chown -R $(id -u):$(id -g) "$HOME"' /vanilla/run.sh
