@@ -2,4 +2,4 @@
 FROM beardedio/terraria:latest
 
 # Fix hard-coded root entries
-RUN sed -i 's#/root#$home#g' /vanilla/run.sh && cat /vanilla/run.sh
+RUN sed -i 's|/root|$HOME|g' /vanilla/run.sh && cat /vanilla/run.sh
